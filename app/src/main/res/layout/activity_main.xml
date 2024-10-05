@@ -5,15 +5,151 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_dark"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:id="@+id/linearL"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
+        android:layout_weight="1">
+
+        <!-- Tecla DO -->
+        <Button
+            android:id="@+id/bDo"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:elevation="4dp"
+            android:padding="10dp"
+            android:text="@string/bDo"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_margin="3dp"
+            app:cornerRadius="0dp" />
+
+        <!-- Tecla RE -->
+        <Button
+            android:id="@+id/bRe"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="@string/bRe"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:elevation="4dp"
+            android:padding="10dp"
+            app:cornerRadius="0dp" />
+
+
+        <!-- Tecla MI -->
+        <Button
+            android:id="@+id/bMi"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="@string/bMi"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:elevation="4dp"
+            android:padding="10dp"
+            app:cornerRadius="0dp" />
+
+        <!-- Tecla FA -->
+        <Button
+            android:id="@+id/bFa"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="@string/bFa"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:elevation="4dp"
+            android:padding="10dp"
+            app:cornerRadius="0dp" />
+
+        <!-- Tecla SOL -->
+        <Button
+            android:id="@+id/bSol"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="@string/bSol"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:elevation="4dp"
+            android:padding="10dp"
+            app:cornerRadius="0dp" />
+
+        <!-- Tecla LA -->
+        <Button
+            android:id="@+id/bLa"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="@string/bLa"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:elevation="4dp"
+            android:padding="10dp"
+            app:cornerRadius="0dp" />
+
+        <!-- Tecla SI -->
+        <Button
+            android:id="@+id/bSi"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="@string/bSi"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:elevation="4dp"
+            android:padding="10dp"
+            app:cornerRadius="0dp"/>
+
+        <!-- Tecla DO ooctava -->
+        <Button
+            android:id="@+id/bDoOct"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="@string/bDo"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:elevation="4dp"
+            android:padding="10dp"
+            app:cornerRadius="0dp"/>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

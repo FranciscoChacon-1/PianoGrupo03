@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PianoGrupo03</string>
+    <string name="bDo">Do</string>
+    <string name="bRe">Re</string>
+    <string name="bMi">Mi</string>
+    <string name="bFa">Fa</string>
+    <string name="bSol">Sol</string>
+    <string name="bLa">La</string>
+    <string name="bSi">Si</string>
 </resources>
