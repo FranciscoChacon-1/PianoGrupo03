@@ -1,5 +1,6 @@
 package sv.edu.catolica.pianogrupo03;
-// Para audio
+
+import android.annotation.SuppressLint;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -17,23 +18,24 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+public class InstrumentosActivity extends AppCompatActivity {
 
-public class AnimalesActivity extends AppCompatActivity{
     private SoundPool soundPool;
-    private int svaca;
-    private int scabra;
-    private int scaballo;
-    private int sperro;
-    private int slobo;
-    private int sburro;
-    private int selefante;
-    private Button bDo, bRe, bMi, bFa, bSol, bLa, bSi, bDoOct;
-    private Button bVaca,bPerro,bCabra,bLobo,bBurro,bCaballo,bElefeante;
+    private int sbajo;
+    private int sbongos;
+    private int sguitarra;
+    private int spiano;
+    private int stambor;
+    private int strompeta;
+    private int stuba;
+    private int sxilofono;
+
+    private Button bBajo,bBongos,bGuitarra,bPiano,bTambor,bTrompeta,btuba,bXilofono;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.piano_animales);
+        setContentView(R.layout.piano_instrumentos);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
@@ -48,32 +50,36 @@ public class AnimalesActivity extends AppCompatActivity{
         } else {
             soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
         }
-        //piano animales teclas
-        svaca = soundPool.load(this, R.raw.vaca, 1);
-        sperro = soundPool.load(this, R.raw.perro, 1);
-        selefante = soundPool.load(this, R.raw.elefante, 1);
-        sburro = soundPool.load(this, R.raw.burro, 1);
-        scabra = soundPool.load(this, R.raw.cabra, 1);
-        scaballo = soundPool.load(this, R.raw.caballo, 1);
-        slobo = soundPool.load(this, R.raw.lobo, 1);
+        //piano instrumentos teclas
+        sbajo = soundPool.load(this, R.raw.bajo, 1);
+        sbongos = soundPool.load(this, R.raw.bongos, 1);
+        sguitarra = soundPool.load(this, R.raw.guitarra, 1);
+        spiano = soundPool.load(this, R.raw.piano, 1);
+        stambor = soundPool.load(this, R.raw.tambor, 1);
+        strompeta = soundPool.load(this, R.raw.trompeta, 1);
+        stuba = soundPool.load(this, R.raw.tuba, 1);
+        sxilofono = soundPool.load(this, R.raw.xilofono, 1);
 
-        bVaca = findViewById(R.id.Vaca);
-        bPerro = findViewById(R.id.Perro);
-        bElefeante = findViewById(R.id.Elefante);
-        bBurro = findViewById(R.id.Burro);
-        bCabra = findViewById(R.id.Cabra);
-        bCaballo = findViewById(R.id.Caballo);
-        bLobo = findViewById(R.id.Lobo);
+        bBajo = findViewById(R.id.bajo);
+        bBongos = findViewById(R.id.bongos);
+        bGuitarra = findViewById(R.id.guitarra);
+        bPiano = findViewById(R.id.piano);
+        bTambor = findViewById(R.id.tambor);
+        bTrompeta = findViewById(R.id.trompeta);
+        btuba = findViewById(R.id.tuba);
+        bXilofono = findViewById(R.id.xilofono);
 
-        teclaPresionada(bVaca, svaca,"Vaca");
-        teclaPresionada(bPerro, sperro,"Perro");
-        teclaPresionada(bElefeante, selefante,"Elefante");
-        teclaPresionada(bBurro, sburro,"Burro");
-        teclaPresionada(bCabra, scabra,"Cabra");
-        teclaPresionada(bCaballo, scaballo,"Caballo");
-        teclaPresionada(bLobo, slobo,"Lobo");
+        teclaPresionada(bBajo, sbajo,"Bajo");
+        teclaPresionada(bBongos, sbongos,"Bongos");
+        teclaPresionada(bGuitarra, sguitarra,"Guitarra");
+        teclaPresionada(bPiano, spiano,"Piano");
+        teclaPresionada(bTambor, stambor,"Tambor");
+        teclaPresionada(bTrompeta, strompeta,"trompeta");
+        teclaPresionada(btuba, stuba,"tuba");
+        teclaPresionada(bXilofono, sxilofono,"Xilofono");
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void teclaPresionada(Button btn, int sonidoId, String mensajeTecla){
         btn.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
@@ -83,14 +89,17 @@ public class AnimalesActivity extends AppCompatActivity{
                     soundPool.play(sonidoId,1,1,0,0,1);
                     Toast.makeText(getApplicationContext(), mensajeTecla, Toast.LENGTH_SHORT).show();
                     break;
+                // Mostrar un Toast con el mensaje de la tecla presionada
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
                     // Al soltar: blanco
                     btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.white)));
                     break;
+                // Mostrar un Toast con el mensaje de la tecla presionada
+
+
             }
             return true;
         });
     }
-
 }

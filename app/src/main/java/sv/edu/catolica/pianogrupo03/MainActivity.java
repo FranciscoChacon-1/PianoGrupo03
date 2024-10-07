@@ -14,6 +14,8 @@ import android.view.MotionEvent;
 import android.content.res.ColorStateList;
 
 import android.widget.Button;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -66,14 +68,14 @@ public class MainActivity extends AppCompatActivity {
         bSi = findViewById(R.id.bSi);
         bDoOct = findViewById(R.id.bDoOct);
 
-        teclaPresionada(bDo, sDo);
-        teclaPresionada(bRe, sRe);
-        teclaPresionada(bMi, sMi);
-        teclaPresionada(bFa, sFa);
-        teclaPresionada(bSol, sSol);
-        teclaPresionada(bLa, sLa);
-        teclaPresionada(bSi, sSi);
-        teclaPresionada(bDoOct, sDoOct);
+        teclaPresionada(bDo, sDo,"Do");
+        teclaPresionada(bRe, sRe,"Re");
+        teclaPresionada(bMi, sMi,"Mi");
+        teclaPresionada(bFa, sFa,"Fa");
+        teclaPresionada(bSol, sSol,"Sol");
+        teclaPresionada(bLa, sLa,"La");
+        teclaPresionada(bSi, sSi,"Si");
+        teclaPresionada(bDoOct, sDoOct,"DoOct");
 
 
 
@@ -82,13 +84,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void teclaPresionada(Button btn, int sonidoId){
+    private void teclaPresionada(Button btn, int sonidoId,String mensajeTecla){
         btn.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     // Al presionar: gris
                     btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.tecla_press)));
                     soundPool.play(sonidoId,1,1,0,0,1);
+                    Toast.makeText(getApplicationContext(), mensajeTecla, Toast.LENGTH_SHORT).show();
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
