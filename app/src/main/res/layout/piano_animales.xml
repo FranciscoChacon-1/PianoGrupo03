@@ -22,9 +22,9 @@
 
         android:layout_weight="1">
 
-        <!-- Tecla  -->
+        <!-- Tecla DO -->
         <Button
-            android:id="@+id/bDo"
+            android:id="@+id/Perro"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -40,7 +40,7 @@
 
         <!-- Tecla RE -->
         <Button
-            android:id="@+id/bRe"
+            android:id="@+id/Burro"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -57,7 +57,7 @@
 
         <!-- Tecla MI -->
         <Button
-            android:id="@+id/bMi"
+            android:id="@+id/Lobo"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -73,7 +73,7 @@
 
         <!-- Tecla FA -->
         <Button
-            android:id="@+id/bFa"
+            android:id="@+id/Elefante"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -89,7 +89,7 @@
 
         <!-- Tecla SOL -->
         <Button
-            android:id="@+id/bSol"
+            android:id="@+id/Cabra"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -105,7 +105,7 @@
 
         <!-- Tecla LA -->
         <Button
-            android:id="@+id/bLa"
+            android:id="@+id/Vaca"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -121,7 +121,7 @@
 
         <!-- Tecla SI -->
         <Button
-            android:id="@+id/bSi"
+            android:id="@+id/Caballo"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -152,4 +152,5 @@
             app:cornerRadius="0dp"/>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
