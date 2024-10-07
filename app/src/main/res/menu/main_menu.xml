@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/cambiar"
+        android:title="@string/txt_changes"
+        android:icon="@drawable/change">
+        <menu>
+            <item android:id="@+id/opcion1"
+                android:title="@string/txt_opc1"
+                android:icon="@drawable/tradicional"/>
+
+            <item android:id="@+id/opcion2"
+                android:title="@string/txt_opc2"
+                android:icon="@drawable/jungle"/>
+
+            <item android:id="@+id/opcion3"
+                android:title="@string/txt_opc3"
+                android:icon="@drawable/musicales"/>
+        </menu>
+    </item>
+
+    <item android:id="@+id/aboutus"
+        android:title="@string/txt_aboutus"
+        android:icon="@drawable/about"/>
+
+    <item android:id="@+id/exit"
+        android:title="@string/txt_exit"
+        android:icon="@drawable/exit"/>
+
+
+</menu>
