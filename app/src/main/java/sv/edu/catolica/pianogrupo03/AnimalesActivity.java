@@ -1,5 +1,4 @@
 package sv.edu.catolica.pianogrupo03;
-
 // Para audio
 import android.media.AudioAttributes;
 import android.media.AudioManager;
@@ -16,23 +15,23 @@ import android.content.res.ColorStateList;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
 
+public class AnimalesActivity extends AppCompatActivity{
     private SoundPool soundPool;
-    private int sRe;
-    private int sMi;
-    private int sFa;
-    private int sSol;
-    private int sLa;
-    private int sSi;
-    private int sDoOct;
+    private int svaca;
+    private int scabra;
+    private int scaballo;
+    private int sperro;
+    private int slobo;
+    private int sburro;
+    private int selefante;
     private Button bDo, bRe, bMi, bFa, bSol, bLa, bSi, bDoOct;
-
+    private Button bVaca,bPerro,bCabra,bLobo,bBurro,bCaballo,bElefeante;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.piano_animales);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
@@ -47,39 +46,30 @@ public class MainActivity extends AppCompatActivity {
         } else {
             soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
         }
+        //piano animales teclas
+        svaca = soundPool.load(this, R.raw.vaca, 1);
+        sperro = soundPool.load(this, R.raw.perro, 1);
+        selefante = soundPool.load(this, R.raw.elefante, 1);
+        sburro = soundPool.load(this, R.raw.burro, 1);
+        scabra = soundPool.load(this, R.raw.cabra, 1);
+        scaballo = soundPool.load(this, R.raw.caballo, 1);
+        slobo = soundPool.load(this, R.raw.lobo, 1);
 
-        int sDo = soundPool.load(this, R.raw.do_, 1);
-        sRe = soundPool.load(this, R.raw.re_, 1);
-        sMi = soundPool.load(this, R.raw.mi_, 1);
-        sFa = soundPool.load(this, R.raw.fa_, 1);
-        sSol = soundPool.load(this, R.raw.sol_, 1);
-        sLa = soundPool.load(this, R.raw.la_, 1);
-        sSi = soundPool.load(this, R.raw.si_, 1);
-        sDoOct = soundPool.load(this, R.raw.do_octave, 1);
+        bVaca = findViewById(R.id.Vaca);
+        bPerro = findViewById(R.id.Perro);
+        bElefeante = findViewById(R.id.Elefante);
+        bBurro = findViewById(R.id.Burro);
+        bCabra = findViewById(R.id.Cabra);
+        bCaballo = findViewById(R.id.Caballo);
+        bLobo = findViewById(R.id.Lobo);
 
-        bDo = findViewById(R.id.bDo);
-        bRe = findViewById(R.id.bRe);
-        bMi = findViewById(R.id.bMi);
-        bFa = findViewById(R.id.bFa);
-        bSol = findViewById(R.id.bSol);
-        bLa = findViewById(R.id.bLa);
-        bSi = findViewById(R.id.bSi);
-        bDoOct = findViewById(R.id.bDoOct);
-
-        teclaPresionada(bDo, sDo);
-        teclaPresionada(bRe, sRe);
-        teclaPresionada(bMi, sMi);
-        teclaPresionada(bFa, sFa);
-        teclaPresionada(bSol, sSol);
-        teclaPresionada(bLa, sLa);
-        teclaPresionada(bSi, sSi);
-        teclaPresionada(bDoOct, sDoOct);
-
-
-
-
-
-
+        teclaPresionada(bVaca, svaca);
+        teclaPresionada(bPerro, sperro);
+        teclaPresionada(bElefeante, selefante);
+        teclaPresionada(bBurro, sburro);
+        teclaPresionada(bCabra, scabra);
+        teclaPresionada(bCaballo, scaballo);
+        teclaPresionada(bLobo, slobo);
     }
 
     private void teclaPresionada(Button btn, int sonidoId){
@@ -99,4 +89,5 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
     }
+
 }
