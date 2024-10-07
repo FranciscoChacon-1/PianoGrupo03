@@ -14,21 +14,20 @@
         android:layout_width="0dp"
         android:layout_height="300dp"
         android:layout_margin="10dp"
-        android:layout_weight="1"
-        android:gravity="center"
         android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_weight="1">
 
-        <!-- Tecla  -->
+        <!-- Tecla DO -->
         <Button
-            android:id="@+id/bDo"
+            android:id="@+id/Perro"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:elevation="4dp"
@@ -36,104 +35,105 @@
             android:text="@string/bDo"
             android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_margin="3dp"
             app:cornerRadius="0dp" />
 
         <!-- Tecla RE -->
         <Button
-            android:id="@+id/bRe"
+            android:id="@+id/Burro"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
+            android:text="@string/bRe"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
-            android:text="@string/bRe"
-            android:textColor="@color/black"
-            android:textSize="18sp"
             app:cornerRadius="0dp" />
 
 
         <!-- Tecla MI -->
         <Button
-            android:id="@+id/bMi"
+            android:id="@+id/Lobo"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
+            android:text="@string/bMi"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
-            android:text="@string/bMi"
-            android:textColor="@color/black"
-            android:textSize="18sp"
             app:cornerRadius="0dp" />
 
         <!-- Tecla FA -->
         <Button
-            android:id="@+id/bFa"
+            android:id="@+id/Elefante"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
+            android:text="@string/bFa"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
-            android:text="@string/bFa"
-            android:textColor="@color/black"
-            android:textSize="18sp"
             app:cornerRadius="0dp" />
 
         <!-- Tecla SOL -->
         <Button
-            android:id="@+id/bSol"
+            android:id="@+id/Cabra"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
+            android:text="@string/bSol"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
-            android:text="@string/bSol"
-            android:textColor="@color/black"
-            android:textSize="18sp"
             app:cornerRadius="0dp" />
 
         <!-- Tecla LA -->
         <Button
-            android:id="@+id/bLa"
+            android:id="@+id/Vaca"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
+            android:text="@string/bLa"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
-            android:text="@string/bLa"
-            android:textColor="@color/black"
-            android:textSize="18sp"
             app:cornerRadius="0dp" />
 
         <!-- Tecla SI -->
         <Button
-            android:id="@+id/bSi"
+            android:id="@+id/Caballo"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
+            android:text="@string/bSi"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
-            android:text="@string/bSi"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="0dp"/>
 
         <!-- Tecla DO ooctava -->
         <Button
@@ -141,15 +141,16 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
+            android:text="@string/bDo"
+            android:layout_margin="3dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
-            android:text="@string/bDo"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="0dp"/>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

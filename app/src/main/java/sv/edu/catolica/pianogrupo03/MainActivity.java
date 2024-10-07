@@ -32,8 +32,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     private SoundPool soundPool;
-    private int sDo, sRe, sMi, sFa, sSol, sLa, sSi, sDoOct;
+    private int sRe;
+    private int sMi;
+    private int sFa;
+    private int sSol;
+    private int sLa;
+    private int sSi;
+    private int sDoOct;
     private Button bDo, bRe, bMi, bFa, bSol, bLa, bSi, bDoOct;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
         }
 
-        sDo = soundPool.load(this, R.raw.do_, 1);
+        int sDo = soundPool.load(this, R.raw.do_, 1);
         sRe = soundPool.load(this, R.raw.re_, 1);
         sMi = soundPool.load(this, R.raw.mi_, 1);
         sFa = soundPool.load(this, R.raw.fa_, 1);
@@ -80,6 +87,12 @@ public class MainActivity extends AppCompatActivity {
         teclaPresionada(bLa, sLa);
         teclaPresionada(bSi, sSi);
         teclaPresionada(bDoOct, sDoOct);
+
+
+
+
+
+
     }
 
     private void teclaPresionada(Button btn, int sonidoId){
