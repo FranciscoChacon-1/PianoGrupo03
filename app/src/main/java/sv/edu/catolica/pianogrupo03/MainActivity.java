@@ -98,17 +98,28 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("ClickableViewAccessibility")
     private void teclaPresionada(Button btn, int sonidoId){
+        // Guardar el color de fondo original del botón
+        final ColorStateList originalColor = btn.getBackgroundTintList();
+
+        // Obtener el texto del botón para usarlo en el Toast
+        String buttonText = btn.getText().toString();
+
         btn.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     // Al presionar: gris
                     btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.tecla_press)));
+
+                    // Mostrar el Toast con el nombre del animal
+                    Toast.makeText(this, "Sonido de " + buttonText, Toast.LENGTH_SHORT).show();
+
+                    // Reproducir el sonido asociado al botón
                     soundPool.play(sonidoId,1,1,0,0,1);
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
-                    // Al soltar: blanco
-                    btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.white)));
+                    // Al soltar, restaurar el color original
+                    btn.setBackgroundTintList(originalColor);
                     break;
             }
             return true;
