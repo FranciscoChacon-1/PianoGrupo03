@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark"
+    android:background="@drawable/instrumentos"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -14,44 +14,46 @@
         android:layout_width="0dp"
         android:layout_height="300dp"
         android:layout_margin="10dp"
-        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:background="@drawable/instrumentos"
         android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
 
-        android:layout_weight="1">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <!-- Tecla DO -->
+
+        <!-- Tecla RE -->
+
         <Button
             android:id="@+id/bajo"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_gravity="clip_vertical|center_horizontal"
+            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:elevation="4dp"
             android:padding="10dp"
-            android:text="@string/bDo"
             android:textColor="@color/black"
             android:textSize="18sp"
-            android:layout_margin="3dp"
             app:cornerRadius="0dp" />
 
-        <!-- Tecla RE -->
         <Button
             android:id="@+id/guitarra"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/bRe"
-            android:layout_margin="3dp"
-            android:textSize="18sp"
-            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:cornerRadius="0dp" />
 
 
@@ -61,14 +63,13 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/bMi"
-            android:layout_margin="3dp"
-            android:textSize="18sp"
-            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:cornerRadius="0dp" />
 
         <!-- Tecla FA -->
@@ -77,14 +78,13 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/bFa"
-            android:layout_margin="3dp"
-            android:textSize="18sp"
-            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:cornerRadius="0dp" />
 
         <!-- Tecla SOL -->
@@ -93,14 +93,13 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/bSol"
-            android:layout_margin="3dp"
-            android:textSize="18sp"
-            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:cornerRadius="0dp" />
 
         <!-- Tecla LA -->
@@ -109,14 +108,13 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/bLa"
-            android:layout_margin="3dp"
-            android:textSize="18sp"
-            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:cornerRadius="0dp" />
 
         <!-- Tecla SI -->
@@ -125,15 +123,14 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/bSi"
-            android:layout_margin="3dp"
-            android:textSize="18sp"
-            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
-            app:cornerRadius="0dp"/>
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:cornerRadius="0dp" />
 
         <!-- Tecla DO ooctava -->
         <Button
@@ -141,15 +138,14 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:text="@string/bDo"
-            android:layout_margin="3dp"
-            android:textSize="18sp"
-            android:textColor="@color/black"
             android:elevation="4dp"
             android:padding="10dp"
-            app:cornerRadius="0dp"/>
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:cornerRadius="0dp" />
 
     </LinearLayout>
 

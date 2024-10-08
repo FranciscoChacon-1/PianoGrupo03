@@ -9,23 +9,19 @@ import android.media.SoundPool;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 
 
 // Manejar eventos táctiles
-import android.os.PersistableBundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 // Cambiar colores según estado
 import android.content.res.ColorStateList;
 
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -163,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
             case "Acerca de Nosotros":
                 Toast.makeText(this, "Acerca de Nosotros Seleccionado", Toast.LENGTH_SHORT).show();
-                intent = new Intent(this, about_us.class);
+                intent = new Intent(this, AboutUsActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();

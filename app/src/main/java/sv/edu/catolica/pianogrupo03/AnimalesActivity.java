@@ -16,7 +16,6 @@ import android.view.MotionEvent;
 // Cambiar colores según estado
 import android.content.res.ColorStateList;
 
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -153,7 +152,7 @@ public class AnimalesActivity extends AppCompatActivity{
 
             case "Acerca de Nosotros":
                 Toast.makeText(this, "Acerca de Nosotros Seleccionado", Toast.LENGTH_SHORT).show();
-                intent = new Intent(this, about_us.class);
+                intent = new Intent(this, AboutUsActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();
@@ -167,6 +166,7 @@ public class AnimalesActivity extends AppCompatActivity{
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
 
 }
