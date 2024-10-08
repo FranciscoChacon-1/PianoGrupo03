@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                     // Al presionar: gris
                     btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.tecla_press)));
 
-                    // Mostrar el Toast con el nombre del animal
+                    // Mostrar el Toast con el nombre de la nota
                     Toast.makeText(this, "Sonido de " + buttonText, Toast.LENGTH_SHORT).show();
 
                     // Reproducir el sonido asociado al botón
