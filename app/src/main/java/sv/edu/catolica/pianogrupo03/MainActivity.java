@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
 
             case "Piano de Instrumentos musicales":
                 Toast.makeText(this, "Piano de Instrumentos Musicales", Toast.LENGTH_SHORT).show();
-                intent = new Intent(this, piano_musical.class);
+                intent = new Intent(this, InstrumentosActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();

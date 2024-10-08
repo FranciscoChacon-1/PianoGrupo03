@@ -1,6 +1,7 @@
 package sv.edu.catolica.pianogrupo03;
 
 import android.os.Bundle;
+import android.text.NoCopySpan;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,4 +17,6 @@ public class about_us extends AppCompatActivity {
         setContentView(R.layout.activity_about_us);
 
     }
+
+
 }

@@ -29,7 +29,7 @@
             android:exported="true"
             android:screenOrientation="landscape"/>
         <activity
-            android:name=".piano_musical"
+            android:name=".InstrumentosActivity"
             android:exported="true"
             android:screenOrientation="landscape"/>
         <activity android:name=".AnimalesActivity"
