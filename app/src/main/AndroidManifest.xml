@@ -27,7 +27,7 @@
         <activity
             android:name=".AboutUsActivity"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".InstrumentosActivity"
             android:exported="true"
