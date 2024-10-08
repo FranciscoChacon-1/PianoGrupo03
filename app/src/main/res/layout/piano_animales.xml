@@ -44,7 +44,7 @@
             <Button
                 android:id="@+id/Perro"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="150dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="3dp"
@@ -53,7 +53,8 @@
                 android:gravity="center_horizontal|center_vertical"
                 android:lines="5"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:text="Perro"
+                android:textColor="@android:color/transparent"
                 android:textSize="18sp"
                 app:cornerRadius="0dp"
                 tools:ignore="DuplicateSpeakableTextCheck" />
@@ -77,14 +78,15 @@
             <Button
                 android:id="@+id/Burro"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="150dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="3dp"
                 android:backgroundTint="@color/yellow"
                 android:elevation="4dp"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:text="Burro"
+                android:textColor="@android:color/transparent"
                 android:textSize="18sp"
                 app:cornerRadius="0dp" />
         </LinearLayout>
@@ -109,14 +111,15 @@
             <Button
                 android:id="@+id/Lobo"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="150dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="3dp"
                 android:backgroundTint="@color/orange"
                 android:elevation="4dp"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:text="Lobo"
+                android:textColor="@android:color/transparent"
                 android:textSize="18sp"
                 app:cornerRadius="0dp" />
         </LinearLayout>
@@ -140,14 +143,15 @@
             <Button
                 android:id="@+id/Elefante"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="150dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="3dp"
                 android:backgroundTint="@color/blue"
                 android:elevation="4dp"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:text="Elefante"
+                android:textColor="@android:color/transparent"
                 android:textSize="18sp"
                 app:cornerRadius="0dp" />
         </LinearLayout>
@@ -171,14 +175,15 @@
             <Button
                 android:id="@+id/Cabra"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="150dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="3dp"
                 android:backgroundTint="@color/light_blue"
                 android:elevation="4dp"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:text="Cabra"
+                android:textColor="@android:color/transparent"
                 android:textSize="18sp"
                 app:cornerRadius="0dp" />
         </LinearLayout>
@@ -202,14 +207,15 @@
             <Button
                 android:id="@+id/Vaca"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="150dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="3dp"
                 android:backgroundTint="@color/purple"
                 android:elevation="4dp"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:text="Vaca"
+                android:textColor="@android:color/transparent"
                 android:textSize="18sp"
                 app:cornerRadius="0dp" />
         </LinearLayout>
@@ -233,14 +239,15 @@
             <Button
                 android:id="@+id/Caballo"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="150dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="3dp"
                 android:backgroundTint="@color/green"
                 android:elevation="4dp"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:text="Caballo"
+                android:textColor="@android:color/transparent"
                 android:textSize="18sp"
                 app:cornerRadius="0dp" />
         </LinearLayout>
@@ -265,14 +272,15 @@
             <Button
                 android:id="@+id/Serpiente"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="150dp"
                 android:layout_gravity="bottom"
                 android:layout_margin="3dp"
                 android:backgroundTint="@color/light_green"
                 android:elevation="4dp"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:text="Serpiente"
+                android:textColor="@android:color/transparent"
                 android:textSize="18sp"
                 app:cornerRadius="0dp" />
         </LinearLayout>
