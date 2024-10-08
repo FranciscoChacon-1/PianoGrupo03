@@ -1,24 +1,35 @@
 package sv.edu.catolica.pianogrupo03;
 
 // Para audio
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+
 
 // Manejar eventos táctiles
+import android.os.PersistableBundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 // Cambiar colores según estado
 import android.content.res.ColorStateList;
 
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
 
     private SoundPool soundPool;
     private int sRe;
@@ -31,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bDo, bRe, bMi, bFa, bSol, bLa, bSi, bDoOct;
 
 
+    @SuppressLint("ObsoleteSdkInt")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,14 +80,14 @@ public class MainActivity extends AppCompatActivity {
         bSi = findViewById(R.id.bSi);
         bDoOct = findViewById(R.id.bDoOct);
 
-        teclaPresionada(bDo, sDo,"Do");
-        teclaPresionada(bRe, sRe,"Re");
-        teclaPresionada(bMi, sMi,"Mi");
-        teclaPresionada(bFa, sFa,"Fa");
-        teclaPresionada(bSol, sSol,"Sol");
-        teclaPresionada(bLa, sLa,"La");
-        teclaPresionada(bSi, sSi,"Si");
-        teclaPresionada(bDoOct, sDoOct,"DoOct");
+        teclaPresionada(bDo, sDo);
+        teclaPresionada(bRe, sRe);
+        teclaPresionada(bMi, sMi);
+        teclaPresionada(bFa, sFa);
+        teclaPresionada(bSol, sSol);
+        teclaPresionada(bLa, sLa);
+        teclaPresionada(bSi, sSi);
+        teclaPresionada(bDoOct, sDoOct);
 
 
 
@@ -84,22 +96,86 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void teclaPresionada(Button btn, int sonidoId,String mensajeTecla){
+    @SuppressLint("ClickableViewAccessibility")
+    private void teclaPresionada(Button btn, int sonidoId){
+        // Guardar el color de fondo original del botón
+        final ColorStateList originalColor = btn.getBackgroundTintList();
+
+        // Obtener el texto del botón para usarlo en el Toast
+        String buttonText = btn.getText().toString();
+
         btn.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     // Al presionar: gris
                     btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.tecla_press)));
+
+                    // Mostrar el Toast con el nombre del animal
+                    Toast.makeText(this, "Sonido de " + buttonText, Toast.LENGTH_SHORT).show();
+
+                    // Reproducir el sonido asociado al botón
                     soundPool.play(sonidoId,1,1,0,0,1);
-                    Toast.makeText(getApplicationContext(), mensajeTecla, Toast.LENGTH_SHORT).show();
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
-                    // Al soltar: blanco
-                    btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.white)));
+                    // Al soltar, restaurar el color original
+                    btn.setBackgroundTintList(originalColor);
                     break;
             }
             return true;
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent;
+
+        switch (item.getTitle().toString()) {
+            case "Piano Tradicional":
+                Toast.makeText(this, "Piano Tradicional Seleccionado", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish(); // Cierra la actividad actual
+                return true;
+
+            case "Piano Infantil de la Selva":
+                Toast.makeText(this, "Piano Infantil de la Selva Seleccionado", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, AnimalesActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+                return true;
+
+            case "Piano de Instrumentos musicales":
+                Toast.makeText(this, "Piano de Instrumentos Musicales", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, piano_musical.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+                return true;
+
+            case "Acerca de Nosotros":
+                Toast.makeText(this, "Acerca de Nosotros Seleccionado", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, about_us.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+                return true;
+
+            case "Salir":
+                finishAffinity(); // Cierra todas las actividades
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 }

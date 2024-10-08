@@ -1,5 +1,7 @@
 package sv.edu.catolica.pianogrupo03;
 // Para audio
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -8,13 +10,17 @@ import android.os.Build;
 import android.os.Bundle;
 
 // Manejar eventos táctiles
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 // Cambiar colores según estado
 import android.content.res.ColorStateList;
 
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -27,8 +33,9 @@ public class AnimalesActivity extends AppCompatActivity{
     private int slobo;
     private int sburro;
     private int selefante;
+    private int sserpiente;
     private Button bDo, bRe, bMi, bFa, bSol, bLa, bSi, bDoOct;
-    private Button bVaca,bPerro,bCabra,bLobo,bBurro,bCaballo,bElefeante;
+    private Button bVaca,bPerro,bCabra,bLobo,bBurro,bCaballo,bElefeante,bSerpiente;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +63,7 @@ public class AnimalesActivity extends AppCompatActivity{
         scabra = soundPool.load(this, R.raw.cabra, 1);
         scaballo = soundPool.load(this, R.raw.caballo, 1);
         slobo = soundPool.load(this, R.raw.lobo, 1);
+        sserpiente = soundPool.load(this, R.raw.serpiente, 1);
 
         bVaca = findViewById(R.id.Vaca);
         bPerro = findViewById(R.id.Perro);
@@ -64,33 +72,101 @@ public class AnimalesActivity extends AppCompatActivity{
         bCabra = findViewById(R.id.Cabra);
         bCaballo = findViewById(R.id.Caballo);
         bLobo = findViewById(R.id.Lobo);
+        bSerpiente = findViewById(R.id.Serpiente);
 
-        teclaPresionada(bVaca, svaca,"Vaca");
-        teclaPresionada(bPerro, sperro,"Perro");
-        teclaPresionada(bElefeante, selefante,"Elefante");
-        teclaPresionada(bBurro, sburro,"Burro");
-        teclaPresionada(bCabra, scabra,"Cabra");
-        teclaPresionada(bCaballo, scaballo,"Caballo");
-        teclaPresionada(bLobo, slobo,"Lobo");
+        teclaPresionada(bVaca, svaca);
+        teclaPresionada(bPerro, sperro);
+        teclaPresionada(bElefeante, selefante);
+        teclaPresionada(bBurro, sburro);
+        teclaPresionada(bCabra, scabra);
+        teclaPresionada(bCaballo, scaballo);
+        teclaPresionada(bLobo, slobo);
+        teclaPresionada(bSerpiente, sserpiente);
     }
 
-    private void teclaPresionada(Button btn, int sonidoId, String mensajeTecla){
+    private void teclaPresionada(Button btn, int sonidoId){
+        // Guardar el color de fondo original del botón
+        final ColorStateList originalColor = btn.getBackgroundTintList();
+
+        // Obtener el texto del botón para usarlo en el Toast
+        String buttonText = btn.getText().toString();
+
         btn.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     // Al presionar: gris
                     btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.tecla_press)));
+
+                    // Mostrar el Toast con el nombre del animal
+                    Toast.makeText(this, "Sonido de " + buttonText, Toast.LENGTH_SHORT).show();
+
+                    // Reproducir el sonido asociado al botón
                     soundPool.play(sonidoId,1,1,0,0,1);
-                    Toast.makeText(getApplicationContext(), mensajeTecla, Toast.LENGTH_SHORT).show();
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
-                    // Al soltar: blanco
-                    btn.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.white)));
+                    // Al soltar, restaurar el color original
+                    btn.setBackgroundTintList(originalColor);
                     break;
             }
             return true;
         });
     }
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent;
+
+        switch (item.getTitle().toString()) {
+            case "Piano Tradicional":
+                Toast.makeText(this, "Piano Tradicional Seleccionado", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish(); // Cierra la actividad actual
+                return true;
+
+            case "Piano Infantil de la Selva":
+                Toast.makeText(this, "Piano Infantil de la Selva Seleccionado", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, AnimalesActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+                return true;
+
+            case "Piano de Instrumentos musicales":
+                Toast.makeText(this, "Piano de Instrumentos Musicales", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, piano_musical.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+                return true;
+
+            case "Acerca de Nosotros":
+                Toast.makeText(this, "Acerca de Nosotros Seleccionado", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, about_us.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+                return true;
+
+            case "Salir":
+                finishAffinity(); // Cierra todas las actividades
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
 }

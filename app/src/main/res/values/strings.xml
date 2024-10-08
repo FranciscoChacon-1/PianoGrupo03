@@ -7,4 +7,19 @@
     <string name="bSol">Sol</string>
     <string name="bLa">La</string>
     <string name="bSi">Si</string>
+    <string name="txt_opc2">Piano Infantil de la Selva</string>
+    <string name="txt_opc1">Piano Tradicional</string>
+    <string name="txt_opc3">Piano de Instrumentos musicales</string>
+    <string name="txt_changes">Cambiar de Piano</string>
+    <string name="txt_aboutus">Acerca de Nosotros</string>
+    <string name="txt_exit">Salir</string>
+    <!-- Strings para descripciones de imágenes -->
+    <string name="img_perro">Imagen del perro</string>
+    <string name="img_burro">Imagen del burro</string>
+    <string name="img_lobo">Imagen del lobo</string>
+    <string name="img_elefante">Imagen del elefante</string>
+    <string name="img_cabra">Imagen de la cabra</string>
+    <string name="img_vaca">Imagen de la vaca</string>
+    <string name="img_caballo">Imagen del caballo</string>
+    <string name="img_serpiente">Imagen de la serpiente</string>
 </resources>
