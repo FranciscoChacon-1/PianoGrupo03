@@ -22,7 +22,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <!-- Layout para la imagen y botón del Bajo -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -52,7 +51,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Layout para la imagen y botón de la Guitarra -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -82,7 +80,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Layout para la imagen y botón del Tambor -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -112,7 +109,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Layout para la imagen y botón de los Bongos -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -142,7 +138,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Layout para la imagen y botón del Piano -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -172,7 +167,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Layout para la imagen y botón de la Tuba -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -202,7 +196,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Layout para la imagen y botón de la Trompeta -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -232,7 +225,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Layout para la imagen y botón del Xilófono -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

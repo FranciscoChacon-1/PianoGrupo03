@@ -124,7 +124,7 @@ public class InstrumentosActivity extends AppCompatActivity {
                 intent = new Intent(this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish(); // Cierra la actividad actual
+                finish();
                 return true;
 
             case "Piano Infantil de la Selva":
@@ -152,7 +152,7 @@ public class InstrumentosActivity extends AppCompatActivity {
                 return true;
 
             case "Salir":
-                finishAffinity(); // Cierra todas las actividades
+                finishAffinity();
                 return true;
 
             default:

@@ -22,9 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="DisableBaselineAlignment">
 
-        <!-- Tecla DO -->
 
-        <!-- Tecla RE -->
 
         <LinearLayout
             android:layout_width="70dp"
@@ -92,7 +90,6 @@
         </LinearLayout>
 
 
-        <!-- Tecla MI -->
         <LinearLayout
             android:layout_width="70dp"
             android:layout_height="match_parent"
@@ -124,7 +121,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Tecla FA -->
         <LinearLayout
             android:layout_width="70dp"
             android:layout_height="match_parent"
@@ -156,7 +152,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Tecla SOL -->
         <LinearLayout
             android:layout_width="70dp"
             android:layout_height="match_parent"
@@ -188,7 +183,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Tecla LA -->
         <LinearLayout
             android:layout_width="70dp"
             android:layout_height="match_parent"
@@ -220,7 +214,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Tecla SI -->
         <LinearLayout
             android:layout_width="70dp"
             android:layout_height="match_parent"
@@ -252,7 +245,6 @@
                 app:cornerRadius="0dp" />
         </LinearLayout>
 
-        <!-- Tecla DO ooctava -->
 
         <LinearLayout
             android:layout_width="70dp"

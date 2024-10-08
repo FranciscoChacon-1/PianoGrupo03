@@ -22,7 +22,7 @@
 
         app:layout_constraintStart_toStartOf="parent">
 
-        <!-- Tecla  -->
+        <!-- Tecla  Do-->
         <Button
             android:id="@+id/bDo"
             style="?android:attr/buttonBarButtonStyle"
