@@ -4,4 +4,22 @@
     <color name="white">#FFFFFFFF</color>
     <color name="tecla_press">#B8B8B8</color>
     <color name="background_dark">#2C2C2C</color>
+    <color name="red">#dc0b0b</color>
+    <color name="purple">#860b94</color>
+    <color name="yellow">#ede902</color>
+    <color name="light_green">#49ed02</color>
+    <color name="green">#108c24</color>
+    <color name="light_blue">#0ecfd9</color>
+    <color name="blue">#0a52b7</color>
+    <color name="orange">#ea9a11</color>
+
+
+
+
+
+
+
+
+
+
 </resources>

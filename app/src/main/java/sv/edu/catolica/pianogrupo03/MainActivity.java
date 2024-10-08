@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bDo, bRe, bMi, bFa, bSol, bLa, bSi, bDoOct;
 
 
+    @SuppressLint("ObsoleteSdkInt")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void teclaPresionada(Button btn, int sonidoId){
         btn.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
@@ -119,44 +121,50 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        Intent intent, intent1, intent2, intent3;
-
+        Intent intent;
 
         switch (item.getTitle().toString()) {
             case "Piano Tradicional":
                 Toast.makeText(this, "Piano Tradicional Seleccionado", Toast.LENGTH_SHORT).show();
-
                 intent = new Intent(this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+                finish(); // Cierra la actividad actual
                 return true;
 
             case "Piano Infantil de la Selva":
                 Toast.makeText(this, "Piano Infantil de la Selva Seleccionado", Toast.LENGTH_SHORT).show();
-                intent1 = new Intent(this, piano_selva.class);
-                startActivity(intent1);
+                intent = new Intent(this, AnimalesActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
                 return true;
 
             case "Piano de Instrumentos musicales":
                 Toast.makeText(this, "Piano de Instrumentos Musicales", Toast.LENGTH_SHORT).show();
-                intent2 = new Intent(this, piano_musical.class);
-                startActivity(intent2);
+                intent = new Intent(this, piano_musical.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
                 return true;
 
             case "Acerca de Nosotros":
                 Toast.makeText(this, "Acerca de Nosotros Seleccionado", Toast.LENGTH_SHORT).show();
-                intent3 = new Intent(this, about_us.class);
-                startActivity(intent3);
+                intent = new Intent(this, about_us.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
                 return true;
 
-            case "Salir": //
-                finishAffinity();
+            case "Salir":
+                finishAffinity(); // Cierra todas las actividades
                 return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
 }

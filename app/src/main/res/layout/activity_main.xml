@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_dark"
+    android:background="@drawable/fondop"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -36,7 +36,8 @@
             android:text="@string/bDo"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="0dp"
+            tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
 
         <!-- Tecla RE -->
         <Button
@@ -52,7 +53,8 @@
             android:text="@string/bRe"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
 
         <!-- Tecla MI -->
@@ -69,7 +71,8 @@
             android:text="@string/bMi"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <!-- Tecla FA -->
         <Button
@@ -85,7 +88,8 @@
             android:text="@string/bFa"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <!-- Tecla SOL -->
         <Button
@@ -101,7 +105,8 @@
             android:text="@string/bSol"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <!-- Tecla LA -->
         <Button
@@ -117,7 +122,8 @@
             android:text="@string/bLa"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <!-- Tecla SI -->
         <Button
@@ -133,7 +139,8 @@
             android:text="@string/bSi"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <!-- Tecla DO ooctava -->
         <Button
@@ -149,7 +156,8 @@
             android:text="@string/bDo"
             android:textColor="@color/black"
             android:textSize="18sp"
-            app:cornerRadius="0dp" />
+            app:cornerRadius="0dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

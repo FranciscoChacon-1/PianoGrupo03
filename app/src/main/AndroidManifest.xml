@@ -32,11 +32,9 @@
             android:name=".piano_musical"
             android:exported="true"
             android:screenOrientation="landscape"/>
-        <activity
-            android:name=".piano_selva"
+        <activity android:name=".AnimalesActivity"
             android:exported="true"
             android:screenOrientation="landscape"/>
-
     </application>
 
 </manifest>
