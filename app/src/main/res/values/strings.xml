@@ -25,4 +25,11 @@
     <string name="name3">Manzanares Larin Jose Carlos</string>
     <string name="name2">Francisco Eduardo Chacón Estrada</string>
     <string name="name1">Diego Alejandro Burgos Servellón</string>
+    <string name="perro">Perro</string>
+    <string name="lobo">Lobo</string>
+    <string name="elefante">Elefante</string>
+    <string name="cabra">Cabra</string>
+    <string name="vaca">Vaca</string>
+    <string name="caballo">Caballo</string>
+    <string name="serpiente">Serpiente</string>
 </resources>
