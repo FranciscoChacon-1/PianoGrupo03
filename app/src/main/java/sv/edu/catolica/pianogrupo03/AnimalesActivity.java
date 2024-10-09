@@ -33,7 +33,6 @@ public class AnimalesActivity extends AppCompatActivity{
     private int sburro;
     private int selefante;
     private int sserpiente;
-    private Button bDo, bRe, bMi, bFa, bSol, bLa, bSi, bDoOct;
     private Button bVaca,bPerro,bCabra,bLobo,bBurro,bCaballo,bElefeante,bSerpiente;
 
     @Override
